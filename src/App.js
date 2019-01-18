@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 import logo from './logo.svg';
 import './App.css';
+import Children from './components/Children';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0
+    };
+    this.startCountInterval();
+  }
+
+  startCountInterval = () => setInterval(() => this.setState(oldState => ({ counter: oldState.counter + 1 })), 1000);
+
   render() {
     return (
       <div className="App">
@@ -11,18 +23,14 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>
+            { `Local State - Seconds without reload: ${ this.state.counter }` }
+          </p>
+          <Children />
         </header>
       </div>
     );
   }
 }
 
-export default App;
+export default hot(module)(App);
