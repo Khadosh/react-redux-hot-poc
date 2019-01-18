@@ -117,6 +117,7 @@
     ]
   },
   "devDependencies": {
+    "prop-types": "^15.6.2",
     "react-hot-loader": "^4.6.3",
     "redux-devtools-extension": "^2.13.7"
   }

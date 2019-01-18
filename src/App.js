@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import logo from './logo.svg';
 import './App.css';
 import Children from './components/Children';
+import AnotherChildren from './components/AnotherChildrenConnector';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
             { `Local State - Seconds without reload: ${ this.state.counter }` }
           </p>
           <Children />
+          <AnotherChildren />
         </header>
       </div>
     );
