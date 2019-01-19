@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Children from './components/Children';
 import AnotherChildren from './components/AnotherChildrenConnector';
+import YetAnotherChildren from './components/YetAnotherChildrenConnector';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
           </p>
           <Children />
           <AnotherChildren />
+          <YetAnotherChildren />
         </header>
       </div>
     );
